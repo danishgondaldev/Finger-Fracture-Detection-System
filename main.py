@@ -63,7 +63,7 @@ class FractureDetectionApp(QMainWindow):
         # Retrieve last used directory
         last_directory = self.settings.value("last_directory", "")
         file_path, _ = QFileDialog.getOpenFileName(self, "Open Image File", last_directory, "Images (*.png *.xpm *.jpg *.jpeg)")
-        
+         
         if file_path:
             current_directory = QFileInfo(file_path).path()
             self.settings.setValue("last_directory", current_directory)
